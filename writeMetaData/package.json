@@ -1,0 +1,28 @@
+{
+  "name": "writemetadata",
+  "version": "1.0.0",
+  "description": "for giant soundteam to write wav metadata",
+  "main": "main.js",
+  "scripts": {
+    "test": "electron .",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "1"
+  },
+  "keywords": [
+    "1"
+  ],
+  "author": "lil Meng",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^21.2.3"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.2",
+    "electron-drag": "^2.0.0",
+    "ffmetadata": "^1.7.0",
+    "jsdom": "^20.0.2"
+  }
+}
