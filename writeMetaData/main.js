@@ -5,7 +5,10 @@ const { ipcMain } = require('electron')
 const createWindow = () => {
   const win = new BrowserWindow({
     width: 800,
-    height: 400,
+    height: 500,
+    resizable: true,
+    //frame: false,
+    useContentSize: false,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation:false //  把这一项加上错误就会消失
