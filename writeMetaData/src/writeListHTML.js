@@ -22,7 +22,7 @@ function unique (arr) {
     return Array.from(new Set(arr))
   }
 
-var listHTML1 = `<div class="btn-group-vertical" role="group" aria-label="Vertical button group">`;
+var listHTML1 = `<div id="listHTML1" class="btn-group-vertical" role="group" aria-label="Vertical button group">`;
 for (let i = 0; i < USC_listJson.length; i++) {
     list1.push(USC_listJson[i]["Category"]);
 }
@@ -48,7 +48,7 @@ document.getElementById("list1").addEventListener("click", function(e) {
             Category = e.target.innerHTML;
             var listHTML2 = ``;
             list2 = [];
-            listHTML2 = `<div class="btn-group-vertical" role="group">`;
+            listHTML2 = `<div id="listHTML2" class="btn-group-vertical" role="group">`;
             for (let i = 0; i < USC_listJson.length; i++) {
                 if (USC_listJson[i]["Category"] == Category) {
                     //console.log(USC_listJson[i]["SubCategory"]);
@@ -78,7 +78,7 @@ document.getElementById("list1").addEventListener("click", function(e) {
                     SubCategory = e.target.innerHTML;
                     var listHTML3 = ``;
                     list3 = [];
-                    listHTML3 = `<div class="btn-group-vertical" role="group" aria-label="Vertical button group">`;
+                    listHTML3 = `<div id="listHTML3" class="btn-group-vertical" role="group" aria-label="Vertical button group">`;
                     for (let i = 0; i < USC_listJson.length; i++) {
                         if (USC_listJson[i]["Category"] == Category && USC_listJson[i]["SubCategory"] == SubCategory) {
                             //console.log(USC_listJson[i]["SubCategory"]);
@@ -107,3 +107,29 @@ document.getElementById("list1").addEventListener("click", function(e) {
     });
 
 
+$(document).ready(function(){
+    $("#myInput1").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#listHTML1 button").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+});
+
+$(document).ready(function(){
+    $("#myInput2").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#listHTML2 button").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+});
+
+$(document).ready(function(){
+    $("#myInput3").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#listHTML3 button").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+});

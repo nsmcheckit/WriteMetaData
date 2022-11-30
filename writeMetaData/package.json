@@ -25,6 +25,7 @@
     "csv-writer": "^1.6.0",
     "electron-drag": "^2.0.0",
     "ffmetadata": "^1.7.0",
+    "jquery": "^3.6.1",
     "jsdom": "^20.0.2",
     "readcsv": "^1.2.1"
   }

@@ -23,19 +23,23 @@
         </div>
       </div>
     </div>
+    <br>
     <div class="row">
       <div class="col-sm-3">
+        <input id="myInput1" type="text" placeholder="Search.." style="width: 160px">
         <div id = "list1" data-spy="scroll"  data-offset="0" style="height:200px;overflow:auto; position: relative;">
             <script type="module" src = "src/writeListHTML.js"></script>
         </div>
       </div>
       <div class="col-sm-3">
-        <div id = "list2" data-spy="scroll" data-target="#navbar-example" data-offset="0" style="height:200px;overflow:auto; position: relative;">
+        <input id="myInput2" type="text" placeholder="Search.." style="width: 160px">
+        <div id = "list2" data-spy="scroll" data-offset="0" style="height:200px;overflow:auto; position: relative;">
           <script type="module" src = "src/writeListHTML.js"></script>
         </div>
       </div>
       <div class="col-sm-3">
-        <div id = "list3" data-spy="scroll" data-target="#navbar-example" data-offset="0" style="height:200px;overflow:auto; position: relative;">
+        <input id="myInput3" type="text" placeholder="Search.." style="width: 160px">
+        <div id = "list3" data-spy="scroll" data-offset="0" style="height:200px;overflow:auto; position: relative;">
           <script type="module" src = "src/writeListHTML.js"></script>
         </div>
       </div>
@@ -44,6 +48,8 @@
   <div class="input-group mb-3" id="metadata">
   </div>
     <p id="info"></p>
+    <script type="text/javascript" src="./node_modules/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script type="module" src="writeMetaData.js"></script>
     <script type="module" src="getSelectWavPath.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
