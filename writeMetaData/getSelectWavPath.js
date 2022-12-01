@@ -23,8 +23,8 @@ function getSelectWavPath(){
       document.getElementById("writeMetadata").addEventListener("click", function(e) {
         for (let i = 0; i < wavPathArr.length; i++) {
           var data = {
-            IKEY: (document.getElementById("metadataoutput").value).toString(),
-            ISBJ: (document.getElementById("metadataoutput").value).toString(),
+            IKEY: (document.getElementById("myInput0").value + " " +document.getElementById("metadataoutput").value).toString(),
+            ISBJ: (document.getElementById("myInput0").value + " " +document.getElementById("metadataoutput").value).toString(),
             };
           //   var data = {
           //       comment: (document.getElementById("metadataoutput").value).toString(),

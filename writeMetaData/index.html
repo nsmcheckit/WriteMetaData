@@ -11,35 +11,42 @@
     <title>writeMetaData</title>
   </head>
   <body style = "overflow: hidden">
-    <div class="card" style="width: 18rem;">
-      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-file-earmark-arrow-down" viewBox="0 0 16 16">
-        <path d="M8.5 6.5a.5.5 0 0 0-1 0v3.793L6.354 9.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 10.293V6.5z"/>
-        <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
-      </svg>
-      <div class="card-body">
-        <p class="card-text">Drag Your Files Here</p>
-        <div id="show">
-          没有选择文件
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card" style="width: 400px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-file-earmark-arrow-down" viewBox="0 0 16 16">
+            <path d="M8.5 6.5a.5.5 0 0 0-1 0v3.793L6.354 9.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 10.293V6.5z"/>
+            <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+          </svg>
+          <div class="card-body">
+            <p class="card-text">Drag Your Files Here</p>
+            <div id="show">
+              没有选择文件
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="col-sm-6">
+        <input id="myInput0" type="text" value="" placeholder="自定义标签..." style="width: 380px; height: 149px">
       </div>
     </div>
     <br>
     <div class="row">
       <div class="col-sm-3">
         <input id="myInput1" type="text" placeholder="Search.." style="width: 160px">
-        <div id = "list1" data-spy="scroll"  data-offset="0" style="height:200px;overflow:auto; position: relative;">
+        <div id = "list1" data-spy="scroll"  data-offset="0" style="height:200px;overflow:auto; position: relative">
             <script type="module" src = "src/writeListHTML.js"></script>
         </div>
       </div>
       <div class="col-sm-3">
         <input id="myInput2" type="text" placeholder="Search.." style="width: 160px">
-        <div id = "list2" data-spy="scroll" data-offset="0" style="height:200px;overflow:auto; position: relative;">
+        <div id = "list2" data-spy="scroll" data-offset="0" style="height:200px;overflow:auto; position: relative">
           <script type="module" src = "src/writeListHTML.js"></script>
         </div>
       </div>
       <div class="col-sm-3">
         <input id="myInput3" type="text" placeholder="Search.." style="width: 160px">
-        <div id = "list3" data-spy="scroll" data-offset="0" style="height:200px;overflow:auto; position: relative;">
+        <div id = "list3" data-spy="scroll" data-offset="0" style="height:200px;overflow:auto; position: relative">
           <script type="module" src = "src/writeListHTML.js"></script>
         </div>
       </div>
@@ -47,6 +54,7 @@
   <br>
   <div class="input-group mb-3" id="metadata">
   </div>
+  <a class="nav-link disabled" style="color: darkgray;font-style: oblique;">音频总监：课本</a>
     <p id="info"></p>
     <script type="text/javascript" src="./node_modules/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="./node_modules/jquery/dist/jquery.min.js"></script>
