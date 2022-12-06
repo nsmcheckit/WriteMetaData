@@ -5,7 +5,7 @@ const { ipcMain } = require('electron')
 const createWindow = () => {
   const win = new BrowserWindow({
     width: 800,
-    height: 600,
+    height: 700,
     resizable: true,
     //frame: false,
     useContentSize: false,
