@@ -11,6 +11,19 @@
     <title>writeMetaData</title>
   </head>
   <body style = "overflow: hidden">
+    <script type="text/javascript">
+      const audio = document.createElement("audio");
+      function playAudio() {
+        audio.src = event.srcElement.id;
+        if(!audio.paused){
+          audio.pause();
+          audio.currentTime = 0;
+        }
+        else{
+          audio.play();
+        }
+      }
+    </script>
     <div id = "alertWindow" data-spy="scroll" data-offset="0" style="height:100px;overflow:auto; position: relative">
     </div>
     <div class="row">

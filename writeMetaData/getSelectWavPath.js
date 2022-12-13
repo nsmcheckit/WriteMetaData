@@ -14,10 +14,14 @@ function getSelectWavPath(){
         for (const f of e.dataTransfer.files) {
           wavPathArr.push(f.path);
         } 
-        console.log(wavPathArr);
+        //console.log(wavPathArr);
         document.getElementById("show").innerHTML = `共选择了` + wavPathArr.length + `个文件`;
         for(let i = 0; i < wavPathArr.length; i++){
-          document.getElementById("show2").innerHTML += `<div>` + wavPathArr[i].split("\\").slice(-1)[0] +`</div>`;
+          document.getElementById("show2").innerHTML += `<div onClick="playAudio()" type="button" aria-pressed="true">` + wavPathArr[i].split("\\").slice(-1)[0] +`</div>`;
+        }
+        var objs=document.getElementById("show2").getElementsByTagName("div");
+        for(var i=0;i<objs.length;i++){
+          objs[i].id= wavPathArr[i];
         }
         console.log(ffmetadata.read(wavPathArr[0], function(err, data) {
           if (err) console.error("Error reading metadata", err);
