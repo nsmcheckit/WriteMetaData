@@ -16,6 +16,9 @@ function getSelectWavPath(){
         } 
         console.log(wavPathArr);
         document.getElementById("show").innerHTML = `共选择了` + wavPathArr.length + `个文件`;
+        for(let i = 0; i < wavPathArr.length; i++){
+          document.getElementById("show2").innerHTML += `<div>` + wavPathArr[i].split("\\").slice(-1)[0] +`</div>`;
+        }
         console.log(ffmetadata.read(wavPathArr[0], function(err, data) {
           if (err) console.error("Error reading metadata", err);
           else console.log(data);
@@ -32,8 +35,8 @@ function getSelectWavPath(){
         successNum = 0;
         for (let i = 0; i < wavPathArr.length; i++) {
           var data = {
-            IKEY: (document.getElementById("myInput0").value + " " +document.getElementById("metadataoutput").value).toString(),
-            ISBJ: (document.getElementById("myInput0").value + " " +document.getElementById("metadataoutput").value).toString(),
+            IKEY: (document.getElementById("metadataoutput").value).toString(),
+            ISBJ: (document.getElementById("metadataoutput").value).toString(),
             };
           //   var data = {
           //       comment: (document.getElementById("metadataoutput").value).toString(),

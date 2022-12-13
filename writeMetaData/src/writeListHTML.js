@@ -7,7 +7,7 @@ var list3 = [];
 var metadata1 = []
 var metadata2 = []
 var metadata3 = [];
-document.getElementById("metadata").innerHTML  = `<input id="metadataoutput" type="text" class="form-control" aria-label="Recipient's username" value= ""aria-describedby="button-addon2">
+document.getElementById("metadata").innerHTML  = `<input id="metadataoutput" type="text" class="form-control" aria-label="Recipient's username" value="" aria-describedby="button-addon2">
 <button id="writeMetadata" class="btn btn-outline-secondary" type="button">Write Metadata</button>
 <button id="reset" class="btn btn-outline-secondary" type="button">Reset</button>`;
 
@@ -15,7 +15,7 @@ document.getElementById("reset").addEventListener("click", function(e) {
     metadata1 = [];
     metadata2 = [];
     metadata3 = [];
-    document.getElementById("metadataoutput").value = "";
+    document.getElementById("metadataoutput").value = document.getElementById("myInput0").value;
 });
 
 function unique (arr) {
@@ -40,7 +40,7 @@ listHTML1 += `</div>`;
 document.getElementById("list1").innerHTML = listHTML1;
 document.getElementById("list1").addEventListener("dblclick", function(e) {
     metadata1.push(e.target.innerHTML);
-    document.getElementById("metadataoutput").value = unique(metadata1) + " " + unique(metadata2) + " " + unique(metadata3);
+    document.getElementById("metadataoutput").value = document.getElementById("myInput0").value + " " + unique(metadata1) + " " + unique(metadata2) + " " + unique(metadata3);
     console.log(document.getElementById("metadataoutput").value);
 });
 document.getElementById("list1").addEventListener("click", function(e) {
@@ -68,7 +68,7 @@ document.getElementById("list1").addEventListener("click", function(e) {
             document.getElementById("list2").innerHTML = listHTML2;
             document.getElementById("list2").addEventListener("dblclick", function(e) {
                 metadata2.push(e.target.innerHTML);
-                document.getElementById("metadataoutput").value = unique(metadata1) + " " + unique(metadata2) + " " + unique(metadata3);
+                document.getElementById("metadataoutput").value = document.getElementById("myInput0").value + " " + unique(metadata1) + " " + unique(metadata2) + " " + unique(metadata3);
                 console.log(document.getElementById("metadataoutput").value);
             });
             document.getElementById("list3").innerHTML = '';
@@ -98,7 +98,7 @@ document.getElementById("list1").addEventListener("click", function(e) {
                     document.getElementById("list3").innerHTML = listHTML3;
                     document.getElementById("list3").addEventListener("dblclick", function(e) {
                         metadata3.push(e.target.innerHTML);
-                        document.getElementById("metadataoutput").value = unique(metadata1) + " " + unique(metadata2) + " " + unique(metadata3);
+                        document.getElementById("metadataoutput").value = document.getElementById("myInput0").value + " " + unique(metadata1) + " " + unique(metadata2) + " " + unique(metadata3);
                         console.log(document.getElementById("metadataoutput").value);
                     });
                     }
@@ -131,5 +131,11 @@ $(document).ready(function(){
         $("#listHTML3 button").filter(function() {
         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
+    });
+});
+
+$(document).ready(function(){
+    $("#myInput0").on("change", function() {
+        document.getElementById("metadataoutput").value = document.getElementById("myInput0").value + " " + unique(metadata1) + " " + unique(metadata2) + " " + unique(metadata3);
     });
 });
