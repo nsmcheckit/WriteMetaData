@@ -1,6 +1,6 @@
 <!doctype html>
-<html lang="zh-CN">
-  <head>
+<html lang="zh-CN" style="height: 100%">
+  <head style="height: 100%">
     <!-- 必须的 meta 标签 -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +10,7 @@
 
     <title>writeMetaData</title>
   </head>
-  <body style = "overflow: hidden">
+  <body style = "overflow: hidden; height: 100%">
     <script type="text/javascript">
       const audio = document.createElement("audio");
       function playAudio() {
@@ -26,8 +26,8 @@
     </script>
     <div id = "alertWindow" data-spy="scroll" data-offset="0" style="height:100px;overflow:auto; position: relative">
     </div>
-    <div class="row">
-      <div class="col-sm-4">
+    <div class="row" style="height: 70%">
+      <div class="col-sm-4" style="height: 65%">
         <div class="card">
           <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-file-earmark-arrow-down" viewBox="0 0 16 16">
             <path d="M8.5 6.5a.5.5 0 0 0-1 0v3.793L6.354 9.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 10.293V6.5z"/>
@@ -40,36 +40,36 @@
             </div>
           </div>
         </div>
-        <div class="card" >
-          <div class="card-body" data-spy="scroll"  data-offset="0" style="font-size:x-small; height: 182px; overflow:auto; position: relative">
+        <div class="card" style="height: 100%">
+          <div class="card-body" data-spy="scroll"  data-offset="0" style="font-size:small; height: 182px; overflow:auto; position: relative">
             <div id="show2">
             </div>
           </div>
         </div>
       </div>
-      <div class="col-sm-8">
+      <div class="col-sm-8" style="height: 100%">
         <input id="myInput0" type="text" value="" placeholder="自定义标签..." style="width: 93.6%; height: 50px">
         <br>
         <br>
-        <div class="row">
-          <div class="col-sm-4">
+        <div class="row" style="height: 100%">
+          <div class="col-sm-4" style="height: 100%">
             <input id="myInput1" type="text" placeholder="Search.." style="width: 160px">
             <br><br>
-            <div id = "list1" data-spy="scroll"  data-offset="0" style="height:200px;overflow:auto; position: relative">
+            <div id = "list1" data-spy="scroll"  data-offset="0" style="height:68%;overflow:auto; position: relative">
                 <script type="module" src = "src/writeListHTML.js"></script>
             </div>
           </div>
           <div class="col-sm-4">
             <input id="myInput2" type="text" placeholder="Search.." style="width: 160px">
             <br><br>
-            <div id = "list2" data-spy="scroll" data-offset="0" style="height:200px;overflow:auto; position: relative">
+            <div id = "list2" data-spy="scroll" data-offset="0" style="height:68%;overflow:auto; position: relative">
               <script type="module" src = "src/writeListHTML.js"></script>
             </div>
           </div>
           <div class="col-sm-4">
             <input id="myInput3" type="text" placeholder="Search.." style="width: 160px">
             <br><br>
-            <div id = "list3" data-spy="scroll" data-offset="0" style="height:200px;overflow:auto; position: relative">
+            <div id = "list3" data-spy="scroll" data-offset="0" style="height:68%;overflow:auto; position: relative">
               <script type="module" src = "src/writeListHTML.js"></script>
             </div>
           </div>
@@ -77,9 +77,11 @@
       </div>
   </div>
   <br>
-  <div class="input-group mb-3" id="metadata">
+  <div class="fixed-bottom">
+    <div class="input-group mb-3" id="metadata" height="10%">
+    </div>
+    <a class="nav-link disabled" style="color: darkgray;font-style: oblique;">音频总监：课本</a>
   </div>
-  <a class="nav-link disabled" style="color: darkgray;font-style: oblique;">音频总监：课本</a>
     <p id="info"></p>
     <script type="text/javascript" src="./node_modules/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="./node_modules/jquery/dist/jquery.min.js"></script>
